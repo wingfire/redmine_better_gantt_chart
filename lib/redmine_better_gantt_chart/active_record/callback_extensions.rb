@@ -46,7 +46,6 @@ module RedmineBetterGanttChart
             after_validation_on_update
             after_save
             after_update
-            after_destroy
           ]
           with_callbacks_disabled *all_callbacks, &block
         end

@@ -23,6 +23,8 @@ module RedmineBetterGanttChart
 
       # Prepare changes for all dependent issues
       def reschedule_dependent_issue(issue = self, options = {}) #start_date_to = nil, due_date_to = nil
+        puts ">> >> >> processing #{issue.id}, options: #{options.inspect}"
+        puts "s: #{issue.start_date}, #{issue.due_date}"
         cache_change(issue, options)
 
         # If this is a PARENT issue
